@@ -1,0 +1,46 @@
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 10rem;
+
+    .nav-links-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 4rem;
+        padding-left: 5rem;
+        ul {
+            display: flex;
+            gap: 3rem;
+            padding: 2.8rem 16rem 2.8rem 10rem;
+            background-color: rgb(255, 255, 255, 0.1);
+            backdrop-filter: blur(1.6rem);
+            &::before {
+                content: '';
+                height: 1px;
+                background-color: rgb(255, 255, 255, 0.2);
+                position: absolute;
+                left: -80%;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 85%;
+            }
+            .nav-link {
+                font-family: 'Barlow Condensed';
+                text-decoration: none;
+                color: #fff;
+                font-size: 1.4rem;
+                letter-spacing: 0.3rem;
+
+                &:hover {
+                }
+
+                strong {
+                    margin-right: 0.6rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
