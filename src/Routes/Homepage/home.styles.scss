@@ -65,5 +65,31 @@
     }
 }
 
+@media (max-width: (38em)) {
+    .homepage-container {
+        margin-top: 0;
+        .homepage-text-container {
+            header {
+                h2 {
+                    font-size: 1.5rem;
+                }
+                span {
+                    font-size: 8rem;
+                }
+            }
+            p {
+                font-size: 1.4rem;
+                max-width: 30rem;
+            }
+        }
+
+        button {
+            max-width: 15rem;
+            max-height: 15rem;
+            font-size: 1.6rem;
+        }
+    }
+}
+
 // create scrolldown menu bar for mobiles, add responsiveness for mobile devices,  preferably create destination route demo
 //next breakpoint 38em width

@@ -1,5 +1,5 @@
 .main-page-container {
-    background-image: url('./assets/Homepage/Bitmap.png');
+    background-image: url('./assets/home/background-home-desktop.jpg');
     height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -9,6 +9,12 @@
 
 @media (max-width: (62em)) {
     .main-page-container {
-        background-image: url('./assets/Homepage/Bitmap1.jpg');
+        background-image: url('./assets/home/background-home-tablet.jpg');
+    }
+}
+
+@media (max-width: (38em)) {
+    .main-page-container {
+        background-image: url('./assets/home/background-home-mobile.jpg');
     }
 }
