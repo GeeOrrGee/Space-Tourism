@@ -18,95 +18,15 @@ const Navigation = () => {
     }, []);
 
     return (
-        <main>
-            <nav className='nav-links-container'>
+        <>
+            {' '}
+            <nav>
                 <NavLink className='logo' to='/'>
                     {<Logo />}
                 </NavLink>
-                {!mobileNavActive ? (
-                    <ul>
-                        <NavLink
-                            eact
-                            className={({ isActive }) => {
-                                return isActive
-                                    ? `nav-link nav-is-active`
-                                    : 'nav-link';
-                            }}
-                            to='/'
-                        >
-                            <li>
-                                {' '}
-                                <strong>00</strong>
-                                HOME
-                            </li>
-                        </NavLink>
-                        <NavLink
-                            className={({ isActive }) => {
-                                return isActive
-                                    ? `nav-link nav-is-active`
-                                    : 'nav-link';
-                            }}
-                            to='/destination'
-                        >
-                            <li>
-                                {' '}
-                                <strong>01</strong>
-                                DESTINATION
-                            </li>
-                        </NavLink>
-                        <NavLink
-                            className={({ isActive }) => {
-                                return isActive
-                                    ? `nav-link nav-is-active`
-                                    : 'nav-link';
-                            }}
-                            to='/crew'
-                        >
-                            <li>
-                                {' '}
-                                <strong>02</strong>
-                                CREW
-                            </li>
-                        </NavLink>
-                        <NavLink
-                            className={({ isActive }) => {
-                                return isActive
-                                    ? `nav-link nav-is-active`
-                                    : 'nav-link';
-                            }}
-                            to='/technology'
-                        >
-                            <li>
-                                {' '}
-                                <strong>03</strong>
-                                TECHNOLOGY
-                            </li>
-                        </NavLink>
-                    </ul>
-                ) : (
-                    <>
-                        {mobileNavState.hamburgerState ? (
-                            <HamburgerNavbar
-                                className='hamburger-icon'
-                                onClick={() => {
-                                    setMobileNavState({
-                                        navClassName: 'activeNavHamburger',
-                                        hamburgerState: false,
-                                    });
-                                }}
-                            />
-                        ) : (
-                            <CancelButton
-                                className='hamburger-icon'
-                                onClick={() =>
-                                    setMobileNavState({
-                                        hamburgerState: true,
-                                        navClassName: '',
-                                    })
-                                }
-                            />
-                        )}
-                        <ul className={mobileNavState.navClassName}>
+                <div className='nav-links-container'>
+                    {!mobileNavActive ? (
+                        <ul>
                             <NavLink
                                 eact
                                 className={({ isActive }) => {
@@ -128,7 +48,7 @@ const Navigation = () => {
                                         ? `nav-link nav-is-active`
                                         : 'nav-link';
                                 }}
-                                to='/destination'
+                                to='/destinations/moon'
                             >
                                 <li>
                                     {' '}
@@ -165,11 +85,94 @@ const Navigation = () => {
                                 </li>
                             </NavLink>
                         </ul>
-                    </>
-                )}
+                    ) : (
+                        <>
+                            {mobileNavState.hamburgerState ? (
+                                <HamburgerNavbar
+                                    className='hamburger-icon'
+                                    onClick={() => {
+                                        setMobileNavState({
+                                            navClassName: 'activeNavHamburger',
+                                            hamburgerState: false,
+                                        });
+                                    }}
+                                />
+                            ) : (
+                                <CancelButton
+                                    className='hamburger-icon'
+                                    onClick={() =>
+                                        setMobileNavState({
+                                            hamburgerState: true,
+                                            navClassName: '',
+                                        })
+                                    }
+                                />
+                            )}
+                            <ul className={mobileNavState.navClassName}>
+                                <NavLink
+                                    eact
+                                    className={({ isActive }) => {
+                                        return isActive
+                                            ? `nav-link nav-is-active`
+                                            : 'nav-link';
+                                    }}
+                                    to='/'
+                                >
+                                    <li>
+                                        {' '}
+                                        <strong>00</strong>
+                                        HOME
+                                    </li>
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) => {
+                                        return isActive
+                                            ? `nav-link nav-is-active`
+                                            : 'nav-link';
+                                    }}
+                                    to='/destination'
+                                >
+                                    <li>
+                                        {' '}
+                                        <strong>01</strong>
+                                        DESTINATION
+                                    </li>
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) => {
+                                        return isActive
+                                            ? `nav-link nav-is-active`
+                                            : 'nav-link';
+                                    }}
+                                    to='/crew'
+                                >
+                                    <li>
+                                        {' '}
+                                        <strong>02</strong>
+                                        CREW
+                                    </li>
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) => {
+                                        return isActive
+                                            ? `nav-link nav-is-active`
+                                            : 'nav-link';
+                                    }}
+                                    to='/technology'
+                                >
+                                    <li>
+                                        {' '}
+                                        <strong>03</strong>
+                                        TECHNOLOGY
+                                    </li>
+                                </NavLink>
+                            </ul>
+                        </>
+                    )}
+                </div>
             </nav>
             <Outlet />
-        </main>
+        </>
     );
 };
 

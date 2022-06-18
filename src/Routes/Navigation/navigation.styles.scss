@@ -1,15 +1,24 @@
-main {
+nav {
+    // display: flex;
+    // flex-direction: column;
+    position: absolute;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    // gap: 10rem;
-    overflow: hidden;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    top: 5%;
 
+    // // gap: 10rem;
+    // overflow: hidden;
+    .logo {
+        padding-left: clamp(1rem, 4vw, 5rem);
+    }
     .nav-links-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 4rem;
+        // padding-top: 4rem;
         padding-left: clamp(0.5rem, 3vw, 5rem);
 
         .logo {
@@ -68,7 +77,8 @@ main {
 // mediaqueries
 
 @media (max-width: (62em)) {
-    main {
+    nav {
+        top: 0;
         .nav-links-container {
             padding-top: 0;
 
@@ -83,7 +93,7 @@ main {
 }
 
 @media (max-width: (38em)) {
-    main {
+    nav {
         .nav-links-container {
             padding: 2rem;
 
