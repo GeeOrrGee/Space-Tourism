@@ -9,6 +9,7 @@ import jsonData from './data.json';
 
 function App() {
     const { destinations, crew, technology } = jsonData;
+    console.log(crew);
     console.log(destinations);
     return (
         <div className='main-page-container'>

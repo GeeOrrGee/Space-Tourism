@@ -8,13 +8,18 @@ const Navigation = () => {
     const [mobileNavActive, setMobileNavActive] = useState(false);
     const [mobileNavState, setMobileNavState] = useState({
         hamburgerState: true,
-        navClassName: '',
     });
 
     useEffect(() => {
-        const windowSize = window.innerWidth;
-        console.log(windowSize);
-        if (windowSize < 608) setMobileNavActive(true);
+        window.addEventListener('resize', (e) => {
+            const windowSize = window.innerWidth;
+            console.log(windowSize);
+            if (windowSize < 608) {
+                setMobileNavActive(true);
+            } else {
+                setMobileNavActive(false);
+            }
+        });
     }, []);
 
     return (
