@@ -1,0 +1,15 @@
+.main-crew-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    // overflow: hidden;
+    ul {
+        display: flex;
+        // width: 100%;
+    }
+    .carousel-btn-container {
+        position: absolute;
+    }
+}

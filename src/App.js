@@ -6,6 +6,7 @@ import Dumm from './Routes/dummy';
 import Destinations from './Routes/Destinations/destinations.component';
 
 import jsonData from './data.json';
+import Crew from './Routes/Crew/crew.component';
 
 function App() {
     const { destinations, crew, technology } = jsonData;
@@ -23,6 +24,7 @@ function App() {
                             <Destinations destinationsData={destinations} />
                         }
                     />
+                    <Route path='/crew' element={<Crew crewArray={crew} />} />
                 </Route>
             </Routes>
         </div>
