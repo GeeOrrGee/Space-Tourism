@@ -17,7 +17,7 @@ const Homepage = () => {
                         we'll give you a truly out of this world experience!
                     </p>
                 </div>
-                <button onClick={() => navigate('/destination')}>
+                <button onClick={() => navigate('/destinations')}>
                     EXPLORE
                 </button>
             </div>

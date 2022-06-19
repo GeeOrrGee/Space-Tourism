@@ -2,4 +2,21 @@
     height: 100vh;
     width: 100vw;
     background-image: url('../../assets/destination/background-destination-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// everything works, just finish the destinations styling and responsiveness
+
+@media (max-width: (62em)) {
+    .destinations-container {
+        background-image: url('../../assets/destination/background-destination-tablet.jpg');
+    }
+}
+
+@media (max-width: (38em)) {
+    .destinations-container {
+        background-image: url('../../assets/destination/background-destination-mobile.jpg');
+    }
 }

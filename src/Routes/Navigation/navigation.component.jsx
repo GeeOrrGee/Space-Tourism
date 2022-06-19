@@ -20,7 +20,7 @@ const Navigation = () => {
     return (
         <>
             {' '}
-            <nav>
+            <nav className='main-nav'>
                 <NavLink className='logo' to='/'>
                     {<Logo />}
                 </NavLink>
@@ -28,7 +28,6 @@ const Navigation = () => {
                     {!mobileNavActive ? (
                         <ul>
                             <NavLink
-                                eact
                                 className={({ isActive }) => {
                                     return isActive
                                         ? `nav-link nav-is-active`
@@ -48,7 +47,7 @@ const Navigation = () => {
                                         ? `nav-link nav-is-active`
                                         : 'nav-link';
                                 }}
-                                to='/destinations/moon'
+                                to='/destinations'
                             >
                                 <li>
                                     {' '}
@@ -110,7 +109,6 @@ const Navigation = () => {
                             )}
                             <ul className={mobileNavState.navClassName}>
                                 <NavLink
-                                    eact
                                     className={({ isActive }) => {
                                         return isActive
                                             ? `nav-link nav-is-active`
@@ -130,7 +128,7 @@ const Navigation = () => {
                                             ? `nav-link nav-is-active`
                                             : 'nav-link';
                                     }}
-                                    to='/destination'
+                                    to='/destinations'
                                 >
                                     <li>
                                         {' '}
