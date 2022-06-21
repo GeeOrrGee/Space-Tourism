@@ -13,7 +13,7 @@ const Navigation = () => {
     useEffect(() => {
         window.addEventListener('resize', (e) => {
             const windowSize = window.innerWidth;
-            console.log(windowSize);
+
             if (windowSize < 608) {
                 setMobileNavActive(true);
             } else {

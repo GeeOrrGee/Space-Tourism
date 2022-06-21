@@ -3,13 +3,69 @@
     height: 100vh;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
-    // overflow: hidden;
+    background-image: url('../../assets/crew/background-crew-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    // justify-content: center;
+    overflow: hidden;
+
     ul {
         display: flex;
-        // width: 100%;
+        // padding-inline: 4rem;
+        height: 85vh;
     }
     .carousel-btn-container {
+        display: flex;
+        gap: 2rem;
         position: absolute;
+        bottom: 6%;
+        left: 10%;
+        button {
+            width: 1.6rem;
+            height: 1.6rem;
+            border: none;
+            border-radius: 50rem;
+            color: #fff;
+            opacity: 0.2;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.5;
+                transition: opacity 0.1s;
+            }
+            &.active-carousel-btn {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+//carousel gaakete, efeqtit da swipeit
+
+@media (max-width: (62em)) {
+    .main-crew-container {
+        background-image: url('../../assets/crew/background-crew-tablet.jpg');
+        .carousel-btn-container {
+            // top: clamp(30%, 65vw, 70%);
+            // left: 50%;
+            // transform: translateX(-50%);
+            top: 31vw;
+            left: 75vw;
+        }
+    }
+}
+
+@media (max-width: (38em)) {
+    .main-crew-container {
+        background-image: url('../../assets/crew/background-crew-mobile.jpg');
+        ul {
+            max-width: 95vw;
+            margin: 1rem auto;
+        }
+        .carousel-btn-container {
+            // display: none;
+            top: 95%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }
