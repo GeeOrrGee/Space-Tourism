@@ -21,7 +21,7 @@ const Crew = ({ crewArray }) => {
     };
 
     return (
-        <section className='main-crew-container'>
+        <section key='crew' className='main-crew-container'>
             <ul>
                 {crewArray.map((crewObj, index) => (
                     <CrewItem

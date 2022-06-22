@@ -12,6 +12,7 @@ const Navigation = () => {
 
     useEffect(() => {
         window.addEventListener('resize', (e) => {
+            // console.log(mobileNavActive)
             const windowSize = window.innerWidth;
 
             if (windowSize < 608) {
@@ -25,7 +26,7 @@ const Navigation = () => {
     return (
         <>
             {' '}
-            <nav className='main-nav'>
+            <nav key='nav' className='main-nav'>
                 <NavLink className='logo' to='/'>
                     {<Logo />}
                 </NavLink>
