@@ -4,7 +4,7 @@ import CrewItem from '../../components/crew-item/crew-item.component';
 import { useEffect, useState } from 'react';
 
 const Crew = ({ crewArray }) => {
-    const [activeCarouselId, setActiveCarouselId] = useState(null);
+    const [activeCarouselId, setActiveCarouselId] = useState('1');
 
     useEffect(() => {
         const activeRefresh = localStorage.getItem('activeCarousel');
