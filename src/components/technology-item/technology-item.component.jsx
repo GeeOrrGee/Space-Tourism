@@ -10,8 +10,14 @@ const TechnologyItem = ({
     const [landscapeImgMode, setLandscapeImgMode] = useState(false);
     const imgName = name.replaceAll(' ', '-').toLowerCase();
     useEffect(() => {
+        const currentTechnologyComponent = localStorage.getItem(
+            'currentTechnologyId'
+        );
+        if (currentTechnologyComponent)
+            setActiveItemId(currentTechnologyComponent);
         window.addEventListener('resize', () => {
             const windowWidth = window.innerWidth;
+            console.log(windowWidth);
             if (windowWidth < 992) {
                 setLandscapeImgMode(true);
             } else {
@@ -21,6 +27,7 @@ const TechnologyItem = ({
     }, []);
     const clickHandler = (e) => {
         console.log(imgName);
+        localStorage.setItem('currentTechnologyId', e.target.dataset.id);
         setActiveItemId(e.target.dataset.id);
     };
     console.log(id, activeItemId);
