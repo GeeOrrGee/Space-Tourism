@@ -17,7 +17,7 @@ function App() {
         <div key='index' className='main-page-container'>
             {' '}
             <Routes>
-                <Route path='/' element={<Navigation />}>
+                <Route path={`/`} element={<Navigation />}>
                     <Route index element={<Homepage />} />
                     <Route
                         path='/destinations/*'
