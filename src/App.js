@@ -17,17 +17,17 @@ function App() {
         <div key='index' className='main-page-container'>
             {' '}
             <Routes>
-                <Route path={`/`} element={<Navigation />}>
+                <Route path={`${'/'}`} element={<Navigation />}>
                     <Route index element={<Homepage />} />
                     <Route
-                        path='/destinations/*'
+                        path='destinations/*'
                         element={
                             <Destinations destinationsData={destinations} />
                         }
                     />
-                    <Route path='/crew' element={<Crew crewArray={crew} />} />
+                    <Route path='crew' element={<Crew crewArray={crew} />} />
                     <Route
-                        path='/technology'
+                        path='technology'
                         element={<Technology technologyData={technology} />}
                     />
                 </Route>
